@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap CDN Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .btn {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .height40{
+            height: 40px;
+        }
+
+        .btn-primary {
+            background-color: #775cff !important;
+            border: none;
+            box-shadow: 0 2px 4px #0000001a, 0 1px #fff6 inset, 0 -2px #0000004d inset;
+        }
+
+        .yellow-text {
+            color: rgba(243, 186, 47, 1) !important;
+        }
+
+        .btn-outline-primary {
+            border-color: #775cff !important;
+            color: #fff !important;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-width: 2px;
+
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #775cff;
+        }
+
+        .btn-secondary {
+            background-color: #c90bf9 !important;
+            border-color: #c90bf9 !important;
+        }
+
+        .btn-outline-secondary {
+            border-color: #c90bf9 !important;
+            color: #fff !important;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-width: 2px;
+
+        }
+
+        .radius180 {
+            border-radius: 180px;
+        }
+
+        body {
+            padding-top: 56px;
+            padding-bottom: 56px;
+            background-color: #121212;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        main {
+            background-image: url('assets/img/home_bg.webp');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: top -100px center;
+            margin: 0;
+            padding: 20px 0 0 0;
+            width: 100%;
+        }
+
+        .fixed-header,
+        .fixed-footer {
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .fixed-header {
+            top: 0;
+            background-color: #333;
+            border-bottom: 2px solid #444;
+        }
+
+        .fixed-footer {
+
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            height: 56px;
+            background-color: #121212;
+            position: fixed;
+            z-index: 1201;
+            box-shadow: 1px 2px 4px 0px #0000001A;
+            width: 100%;
+            padding: 0px 16px 5px 16px;
+            border: 1px solid;
+            border-image-slice: 1;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0;
+            border-width: 1px;
+
+            border-image-source: linear-gradient(94.68deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.0001) 40.57%, rgba(255, 255, 255, 0.0001) 57.44%, rgba(255, 255, 255, 0.2) 100%);
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+            -webkit-backdrop-filter: blur(35px) sepia(5%);
+            backdrop-filter: blur(35px) sepia(5%);
+            color: #999;
+        }
+
+        .card {
+            /* background-color: rgba(128, 128, 128, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 32px;
+            color: #999; */
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding: 0 8px;
+            border-radius: 32px;
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(35px);
+            backdrop-filter: blur(35px);
+            position: relative;
+            color: #ccc;
+        }
+
+        .card::before {
+            content: "";
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            -webkit-mask-image: linear-gradient(black, black), linear-gradient(black, black);
+            mask-image: linear-gradient(black, black), linear-gradient(black, black);
+            -webkit-mask-position-x: 0%, 0%;
+            -webkit-mask-position-y: 0%, 0%;
+            -webkit-mask-size: auto, auto;
+            mask-size: auto, auto;
+            -webkit-mask-repeat: repeat, repeat;
+            mask-repeat: repeat, repeat;
+            -webkit-mask-origin: content-box, border-box;
+            mask-origin: content-box, border-box;
+            -webkit-mask-clip: content-box, border-box;
+            mask-clip: content-box, border-box;
+            -webkit-mask-mode: match-source, match-source;
+            mask-mode: match-source, match-source;
+            -webkit-mask-composite: exclude;
+            mask-composite: exclude;
+            border-radius: inherit;
+            padding: 1.5px;
+            background: linear-gradient(156.52deg, rgba(255, 255, 255, 0.4) 2.12%, rgba(255, 255, 255, 0.0001) 39%, rgba(255, 255, 255, 0.0001) 54.33%, rgba(255, 255, 255, 0.1) 93.02%);
+        }
+
+        .card-body {
+            border-radius: 15px;
+        }
+
+        .card-title {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        #test_version_heading {
+            width: 120px;
+            height: 25px;
+            color: #fff;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-size: 11px;
+        }
+
+        #test_version_heading span {
+            position: absolute;
+            margin: 2px 0 0 30px;
+        }
+
+        #popular_games .card-body {
+            position: relative;
+        }
+
+        #popular_games .game-image {
+            border-radius: 10px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #popular_games a .and-more {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            left: 0%;
+            z-index: 2;
+        }
+
+        #popular_games a {
+            text-decoration: none;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="fixed-header text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <svg width="65" height="14" viewBox="0 0 413 85" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        data-cy="header-brand-logo" name="brand-logo" style="min-width:65px">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M289.809 12.8594H321.38L302.761 84.907H269.57L289.809 12.8594ZM114.951 14.4784H20.2372L0.808594 84.907H58.2848L76.9038 64.6689H36.5L40.5952 52.5H66.5L82.5705 38.7641H43L46.1419 28.5H73.5L84.1895 20.1451L90.6657 84.907H128.713L170.809 16.0975H172.428L154.618 84.907H230.713L249.332 14.4784H140.047L118.999 45.2403L114.951 14.4784ZM269.57 65.4784H243.666L237.999 84.907H263.904L269.57 65.4784ZM403.142 12.8594H327.047L308.428 84.907H384.523L403.142 12.8594ZM368.176 32H353.849L344 68.7109H358.326L368.176 32ZM197.954 32H214.071L204.222 68.7109H189L197.954 32Z"
+                            fill="white"></path>
+                        <path d="M31 75H2.8072L0 85H23.6579L31 75Z" fill="#02CCFE"></path>
+                        <path d="M371.159 65H397L394.766 73H368L371.159 65Z" fill="#94EBFF"></path>
+                        <path d="M254.121 53L258 42H234.88L231 53H254.121Z" fill="#FE04FC"></path>
+                        <path d="M251.886 60L253 57H230.114L229 60H251.886Z" fill="white"></path>
+                        <path d="M410.4 37L412 32H389.6L388 37H410.4Z" fill="white"></path>
+                        <path d="M252.175 9L253 6H220.825L220 9H252.175Z" fill="white"></path>
+                        <path d="M142.387 69L144 65H120.613L119 69H142.387Z" fill="#282626"></path>
+                        <path d="M411.387 22L413 18H389.613L388 22H411.387Z" fill="#282626"></path>
+                        <path d="M379.193 2L380 0H355.807L355 2H379.193Z" fill="#2CCBF2"></path>
+                    </svg>
+                </a>
+
+                <div class="ms-auto">
+                    <button class="btn btn-outline-light me-2" type="button">Register</button>
+                    <button class="btn btn-primary" type="button">Login</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="test_version_heading">
+                        <span>測試版</span>
+                        <svg width="120" height="25" viewBox="0 0 120 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34 0H120L106 25H20L34 0Z" fill="url(#paint0_linear_6526_324639)"
+                                fill-opacity="0.15"></path>
+                            <path d="M26 0H112L98 25H12L26 0Z" fill="url(#paint1_linear_6526_324639)"
+                                fill-opacity="0.3"></path>
+                            <path d="M11.7089 4.09118C13.1238 1.56472 15.7934 0 18.689 0H104L90 25H0L11.7089 4.09118Z"
+                                fill="url(#paint2_linear_6526_324639)"></path>
+                            <defs>
+                                <linearGradient id="paint0_linear_6526_324639" x1="114" y1="10" x2="20" y2="10"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#C90BF9"></stop>
+                                    <stop offset="1" stop-color="#171718"></stop>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_6526_324639" x1="106" y1="10" x2="12" y2="10"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#C90BF9"></stop>
+                                    <stop offset="1" stop-color="#171718"></stop>
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_6526_324639" x1="94" y1="9.99999" x2="34.5" y2="-27.5"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#C90BF9"></stop>
+                                    <stop offset="1" stop-color="#171718"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <h2 class="text-left my-0">欢迎红利 100%</h2>
+                            <span class="h5 yellow-text">最高可达200美元</span>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <button class="btn btn-primary w-100 radius180 height40">閱讀更多</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-outline-primary w-100 radius180 height40">存款</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 1</h5>
+                            <p class="card-text">This is a mobile-friendly feature using Bootstrap classes.</p>
+                            <div class="text-center">
+                                <button class="btn btn-primary w-50 radius180 height40">前往娛樂城</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-3">
+                    <div class="card" id="popular_games">
+                        <div class="card-body">
+                            <h4 class="card-title text-center" style="font-size: 16px; line-height: 30px;">Popular Games
+                                to <span class="yellow-text">Play!</span></h4>
+                            <div class="row justify-content-center">
+                                <div class="col-6 col-md-3 mb-3">
+                                    <a href="#"><img src="assets/img/10006.avif" alt="Image 10006"
+                                            class="img-fluid game-image">
+                                        <span class="and-more">and more...</span>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <a href="#"><img src="assets/img/10007.avif" alt="Image 10007"
+                                            class="img-fluid game-image">
+                                        <span class="and-more">and more...</span>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <a href="#"><img src="assets/img/10014.avif" alt="Image 10014"
+                                            class="img-fluid game-image">
+                                        <span class="and-more">and more...</span>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <a href="#"><img src="assets/img/10018.avif" alt="Image 10018"
+                                            class="img-fluid game-image">
+                                        <span class="and-more">and more...</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="fixed-footer bg-dark text-white py-3">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-6">
+                    <a href="#" class="btn btn-primary w-100">Play Now</a>
+                </div>
+                <div class="col-6">
+                    <a href="#" class="btn btn-success w-100">Get the Bonus</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
