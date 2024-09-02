@@ -322,6 +322,13 @@
             background: linear-gradient(156.52deg, rgba(255, 255, 255, 0.4) 2.12%, rgba(255, 255, 255, 0.0001) 39%, rgba(255, 255, 255, 0.0001) 54.33%, rgba(255, 255, 255, 0.1) 93.02%);
         
         }
+
+        @media (min-width: 992px) {
+            #home-section-btn{
+                scale: 1.5;
+                margin: 0 4em 2em 0 !important;
+            }
+        }
     </style>
 </head>
 
@@ -360,7 +367,7 @@
             <div class="row">
                 <div class="col-12">
                     <div id="test_version_heading">
-                        <span>Bets Testing</span>
+                        <span>Best Testing</span>
                         <svg width="120" height="25" viewBox="0 0 120 25" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M34 0H120L106 25H20L34 0Z" fill="url(#paint0_linear_6526_324639)"
@@ -411,14 +418,14 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="position-relative">
-                                <img src="assets/img/home_section_1.webp" alt="AdvantPlay" class="img-fluid w-100">
+                                <img id="home-section-img" src="assets/img/home_section_1.webp" alt="AdvantPlay" class="img-fluid w-100">
                                 <div class="position-absolute top-0 start-0 p-4 text-white">
                                     <h2 class="mb-2">AdvantPlay</h2>
                                     <h3 class="text-warning mb-3">Free Spins</h3>
                                     <p class="mb-4">Up to 100 free spins<br>and win up to $500!</p>
                                 </div>
                                 <a href="https://www.evo.io/casino?referralCode=EVO1788"
-                                    class="btn btn-primary position-absolute bottom-0 end-0 m-3">Get it Now</a>
+                                    class="btn btn-primary position-absolute bottom-0 end-0 m-3" id="home-section-btn">Get it Now</a>
                             </div>
                         </div>
                     </div>
