@@ -7,8 +7,56 @@
     <title>EVO</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ90HR2FLE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QZ90HR2FLE');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1340563590235074');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1340563590235074&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Facebook Lead Event Tracking -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].href.includes('evo.io')) {
+                    links[i].addEventListener('click', function(event) {
+                        event.preventDefault();
+                        fbq('track', 'Lead');
+                        setTimeout(function() {
+                            window.open(event.target.href, '_blank');
+                        }, 300);
+                    });
+                }
+            }
+        });
+    </script>
+
+    <style>
         @font-face {
             font-family: 'Basis Grotesque';
             src: url('assets/fonts/basis_grotesque.otf') format('opentype');
@@ -25,7 +73,18 @@
             font-stretch: 75% 125%;
         }
 
-        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
             font-family: 'Space Grotesk', sans-serif;
         }
 
@@ -281,9 +340,11 @@
             margin-bottom: 4px;
             background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
         }
-        #bonusModal{
+
+        #bonusModal {
             margin-top: 50px;
         }
+
         #bonusModal .modal-content {
             /* background-color: #111; */
             background: linear-gradient(to bottom, rgba(119, 92, 255, 0.3), #111 100%), #111;
@@ -291,7 +352,7 @@
             background-repeat: no-repeat;
         }
 
-        #bonusModal .modal-body{
+        #bonusModal .modal-body {
             padding-bottom: 50px;
 
         }
@@ -305,7 +366,7 @@
             margin-bottom: 2em;
         }
 
-        #bonusModal .small{
+        #bonusModal .small {
             font-size: 11px;
             color: #B1BAD3;
         }
@@ -341,11 +402,11 @@
             border-radius: inherit;
             padding: 1px;
             background: linear-gradient(156.52deg, rgba(255, 255, 255, 0.4) 2.12%, rgba(255, 255, 255, 0.0001) 39%, rgba(255, 255, 255, 0.0001) 54.33%, rgba(255, 255, 255, 0.1) 93.02%);
-        
+
         }
 
         @media (min-width: 992px) {
-            #home-section-btn{
+            #home-section-btn {
                 scale: 1.5;
                 margin: 0 4em 2em 0 !important;
             }
@@ -376,8 +437,10 @@
                 </a>
 
                 <div class="ms-auto">
-                    <a href="https://www.evo.io/casino?referralCode=EVO1788" class="btn me-2 text-white" role="button">Register</a>
-                    <a href="https://www.evo.io/casino?referralCode=EVO1788" class="btn btn-primary" role="button">Login</a>
+                    <a href="https://www.evo.io/casino?referralCode=EVO1788" target="_blank" class="btn me-2 text-white"
+                        role="button">Register</a>
+                    <a href="https://www.evo.io/casino?referralCode=EVO1788" target="_blank" class="btn btn-primary"
+                        role="button">Login</a>
                 </div>
             </div>
         </nav>
@@ -426,10 +489,12 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col-6">
-                            <button class="btn btn-primary w-100 radius180 height40" data-bs-toggle="modal" data-bs-target="#bonusModal">Read More</button>
+                            <button class="btn btn-primary w-100 radius180 height40" data-bs-toggle="modal"
+                                data-bs-target="#bonusModal">Read More</button>
                         </div>
                         <div class="col-6">
-                            <a href="https://www.evo.io/casino?referralCode=EVO1788" class="btn btn-outline-primary w-100 radius180 height40">Join Now</a>
+                            <a href="https://www.evo.io/casino?referralCode=EVO1788" target="_blank"
+                                class="btn btn-outline-primary w-100 radius180 height40">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -439,14 +504,17 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="position-relative">
-                                <img id="home-section-img" src="assets/img/home_section_1.webp" alt="AdvantPlay" class="img-fluid w-100">
+                                <img id="home-section-img" src="assets/img/home_section_1.webp" alt="AdvantPlay"
+                                    class="img-fluid w-100">
                                 <div class="position-absolute top-0 start-0 p-4 text-white">
                                     <h2 class="mb-2">AdvantPlay</h2>
                                     <h3 class="text-warning mb-3">Free Spins</h3>
                                     <p class="mb-4">Up to 100 free spins<br>and win up to $500!</p>
                                 </div>
                                 <a href="https://www.evo.io/casino?referralCode=EVO1788"
-                                    class="btn btn-primary position-absolute bottom-0 end-0 m-3" id="home-section-btn">Get it Now</a>
+                                target="_blank"
+                                    class="btn btn-primary position-absolute bottom-0 end-0 m-3"
+                                    id="home-section-btn">Get it Now</a>
                             </div>
                         </div>
                     </div>
@@ -458,28 +526,37 @@
                                 to <span class="yellow-text">Play!</span></h4>
                             <div class="row justify-content-center">
                                 <div class="col-6 col-md-3 mb-3">
-                                    <a href="https://www.evo.io/casino?referralCode=EVO1788" class="position-relative d-block">
+                                    <a href="https://www.evo.io/casino?referralCode=EVO1788"
+                                        target="_blank"
+                                        class="position-relative d-block">
                                         <img src="assets/img/10006.avif" alt="Image 10006" class="img-fluid game-image">
                                     </a>
                                 </div>
                                 <div class="col-6 col-md-3 mb-3">
-                                    <a href="https://www.evo.io/casino?referralCode=EVO1788" class="position-relative d-block">
+                                    <a href="https://www.evo.io/casino?referralCode=EVO1788"
+                                    target="_blank"
+                                        class="position-relative d-block">
                                         <img src="assets/img/10007.avif" alt="Image 10007" class="img-fluid game-image">
                                     </a>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <a href="https://www.evo.io/casino?referralCode=EVO1788" class="position-relative d-block">
+                                    <a href="https://www.evo.io/casino?referralCode=EVO1788"
+                                    target="_blank"
+                                        class="position-relative d-block">
                                         <img src="assets/img/10014.avif" alt="Image 10014" class="img-fluid game-image">
                                     </a>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <a href="https://www.evo.io/casino?referralCode=EVO1788" class="position-relative d-block">
+                                    <a href="https://www.evo.io/casino?referralCode=EVO1788"
+                                    target="_blank"
+                                        class="position-relative d-block">
                                         <img src="assets/img/10018.avif" alt="Image 10018" class="img-fluid game-image">
                                     </a>
                                 </div>
                             </div>
                             <div class="text-center mt-3">
-                                <a href="https://www.evo.io/casino?referralCode=EVO1788" class="btn btn-primary">And More</a>
+                                <a href="https://www.evo.io/casino?referralCode=EVO1788" target="_blank" class="btn btn-primary">And
+                                    More</a>
                             </div>
                         </div>
                     </div>
@@ -757,9 +834,9 @@
                         <div class="col-12 col-md-6">
                             <h5 style="font-size: 14px;">About Us</h5>
                             <ul class="list-unstyled">
-                                <li><a href="https://www.evo.io/casino?referralCode=EVO1788">Terms of Service</a></li>
-                                <li><a href="https://www.evo.io/casino?referralCode=EVO1788">AML Policy</a></li>
-                                <li><a href="https://www.evo.io/casino?referralCode=EVO1788">Privacy Policy</a></li>
+                                <li><a href="https://www.evo.io/casino?referralCode=EVO1788" target="_blank">Terms of Service</a></li>
+                                <li><a href="https://www.evo.io/casino?referralCode=EVO1788" target="_blank">AML Policy</a></li>
+                                <li><a href="https://www.evo.io/casino?referralCode=EVO1788" target="_blank">Privacy Policy</a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-md-6">
@@ -768,8 +845,8 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p class="small">Evo.io is owned and operated by Monarch Innovative Labs Limited, 
-                                Legal entity identification number: 3-102-902611, registered address: 
+                            <p class="small">Evo.io is owned and operated by Monarch Innovative Labs Limited,
+                                Legal entity identification number: 3-102-902611, registered address:
                                 Province 01 San Jose, Canton 02 Escazu, San Rafael, Costa Rica</p>
                         </div>
                     </div>
@@ -811,7 +888,7 @@
                             <h5 class="modal-title text-white" id="bonusModalLabel">Bonus</h5>
 
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                                aria-label="Close"></button>
                         </div>
 
                         <div class="mt-3">
@@ -827,7 +904,8 @@
 
                         <h6 class="text-center mb-4">Receive Bonus on Your First Deposit</h6>
 
-                        <p class="mb-4 small">Welcome to EVO.io! As a new member, you have the opportunity to receive a 100%
+                        <p class="mb-4 small">Welcome to EVO.io! As a new member, you have the opportunity to receive a
+                            100%
                             Welcome Bonus on your first deposit. Below are the details and rules for this exciting
                             offer:</p>
 
@@ -836,14 +914,14 @@
                         <h4 class="mb-3">How to Qualify?</h4>
 
                         <div class="each-qualify">
-                            <div >First Deposit</div>
+                            <div>First Deposit</div>
                             <div class="small">Make your first deposit within 7 days of
                                 registering your account.</div><img
                                 src="data:image/webp;base64,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"
                                 style="position:absolute;right:0px;top:-32px" alt="bonus image">
                         </div>
                         <div class="each-qualify">
-                            <div >Bonus Amount </div>
+                            <div>Bonus Amount </div>
                             <div class="small">Get a 100% bonus on your initial deposit, up to a
                                 maximun of $200.
                             </div><img
@@ -851,7 +929,7 @@
                                 style="position:absolute;right:0px;top:-32px" alt="bonus image">
                         </div>
                         <div class="each-qualify">
-                            <div >Bonus Currency</div>
+                            <div>Bonus Currency</div>
                             <div class="small">The bonus will be credited in USDT (Tether).</div>
                             <img src="data:image/webp;base64,UklGRhAFAABXRUJQVlA4WAoAAAAQAAAAYwAAVAAAQUxQSCMBAAABgJttb9wGI2AEjMAR0GsDV7m4hh5u4FTs1WuHXOpdulSZOxkBvo8fZO48T0RMAP3iZo0pReWCyfTJtt5fSpk4255XWqDmyfYfuDRTO+h9KEu2Q09Kku3wk3JEO+J9KIXYUUcuRH8c6xyJatOkjVM7dnDBeWbYnYtk8FKF1kPEGzwkPOMqaBXaD0quQJhZ+RpzeQIWzadiBXNK0GxOO6zeywlUY07fCXr00kJFczoQ9MzJe4AK5vSEoLOTE8IeXbwrYYt57JjAGwedEHxysPswXF0xQO9sXQGuPkhSBf00CEBfAAVIVYgFCABSBRr9KUKsAvsTBIruFIL6KvDMmWAQZ18KQiR5rMB6UKV9nzDeBeqgGlO+Wp/vNL/aOLTrqkz/4AMAVlA4IMYDAABwEwCdASpkAFUAPpFCm0klpCKhKTgK8LASCUMT5Pn5XaiFCg0QHv0ebZfnuNMt3lCfatTanx6A5NVrd4cCdekKfn0JnJMUyVU2lnckiKz3fMXB4WemQDz6DbFdmq/3YnNy/I9qV+H6mq7IMnEub4dl4a0v7MnMGnDiYpwJ6FF5pDBvzdigBKf8ki36S5HJ9R6AUdlmNtV0kovw75/l9I2OMQCQAAD+7U3Vw6Vvw6b113Zf301mYuZ8499d6eUXpGM4xq0A05Dbc2O5hY9Gk/DbPMeh10HcChPsPGDER9Ar7D2VGRpooXTQaVrJ6YQrucckYXNBZYss4Q9nx5futdkPlv6T8O/6YRMDjTmOyZOVh0z/+87okuDIK72NBcguHllDntE14RBl7ECGMpkgNf1jyNpUQTfvl7amewiWbC5qQIqz4jIjXfiMiSewC9nUDvWCZQID0nv6P2TkpNax1dbw8WZhSat8xjhSn3keL8ZV/5NL2b6BUIuSW+yIa0idfpevIFNWDdhEeQ81vs6+rgSvzz+HDiOyB1FVnhfVcHh+Qmunbwtgxf8Q2rv+JPsaBowqQbNbED1YwwUfp8wWm2uzMm91DkkCPx7DR2pGF3kePAu5VkAjjCGoNzdNRqoVfZEmxWGZAfWEs8uwYzxEeZbtwyZkLfz/+CfWHq9qhGOaizhVG6B6PIthaaA6fyo7GCf8MwtYyGK2MyOOugf59NaskxPPThU2CbxfPkU60mdC+ANIgEVeH5HsqCG1lqxZpPjv9ap1Zr5uN3v+U+SvBngov2Bi4dt7njbSy9mMH3BlQBDbfjEZm1b6X/Lp2G8aVhsxda74DYIPg0tgWyMEU9FQcelHMheyEsEqwyjtvD6GrhJ60+qSSxvzcDSyC99dn5KQ4uFVlyTJ89gsPIfL1xdJ4AJygw0LF/PAkzfhofs+FrjxyH1+A/lzN/2T+KPv/DJF5V8rmCv1ZFIyWK5QOJrM026mf9xAkLFp5U4uj7gIMbNi9RjfVh6yBJ972mhVGqdNf3sXFtaHn3oYCmCuAqfbkDi1tCwWgF5P658vMSJ9ePKzyOzV7KNs0KccPjh3UsYvgFENgr+eTNDJLuVuBs/nRw1N3pEd7z3ve5jHIl4z6N8wE19MRJuxjXuh5p4kFZAirNJQtZQuzugez1c2Bgh+SO6DfxkO5Abq9PVTLEfICEJx0bQAucAYtiMPXvq7Mo6PyH0L0/9AR/P/2Fam6gNXTSMLLm/qJ7e3trN5AVCgz8Rxvjs//oEYsYvgiwlCKBRmAAAAAAA="
                                 style="position:absolute;right:0px;top:-32px" alt="bonus image">
@@ -868,10 +946,11 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-6">
-                    <a href="https://www.evo.io/casino?referralCode=EVO1788" class="btn btn-dark w-100">Play Now</a>
+                    <a href="https://www.evo.io/casino?referralCode=EVO1788" target="_blank" class="btn btn-dark w-100">Play Now</a>
                 </div>
                 <div class="col-6">
-                    <a href="https://www.evo.io/casino?referralCode=EVO1788" class="btn btn-primary w-100">Get the Bonus</a>
+                    <a href="https://www.evo.io/casino?referralCode=EVO1788" target="_blank" class="btn btn-primary w-100">Get the
+                        Bonus</a>
                 </div>
             </div>
         </div>
